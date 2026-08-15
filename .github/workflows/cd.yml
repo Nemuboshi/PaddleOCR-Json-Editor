@@ -19,9 +19,6 @@ jobs:
           - os: ubuntu-22.04
             artifact: PaddleJsonEditor-linux-amd64
             path: build/bin/PaddleJsonEditor
-          - os: macos-13
-            artifact: PaddleJsonEditor-macos-amd64
-            path: build/bin/PaddleJsonEditor.app
           - os: macos-14
             artifact: PaddleJsonEditor-macos-arm64
             path: build/bin/PaddleJsonEditor.app
