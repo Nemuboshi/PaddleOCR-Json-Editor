@@ -26,6 +26,7 @@ jobs:
           cache: pnpm
           cache-dependency-path: frontend/pnpm-lock.yaml
       - run: pnpm --dir frontend install --frozen-lockfile
+      - run: pnpm --dir frontend build
       - run: go test ./...
       - run: go vet ./...
       - run: go install honnef.co/go/tools/cmd/staticcheck@latest
