@@ -10,8 +10,14 @@ let { open = $bindable(), currentPage, totalPages, onClose, onSuccess, onError }
   open: boolean; currentPage: number | null; totalPages: number;
   onClose: () => void; onSuccess: (message: string) => void; onError: (error: unknown) => void;
 } = $props();
-let start = $state(1), end = $state(1), busy = $state(false);
-$effect(() => { if (open) { start = (currentPage ?? 0) + 1; end = start; } });
+let start = $state(1), end = $state(1), busy = $state(false), wasOpen = false;
+$effect(() => {
+  if (open && !wasOpen) {
+    start = (currentPage ?? 0) + 1;
+    end = start;
+  }
+  wasOpen = open;
+});
 async function submit() {
   busy = true;
   try {

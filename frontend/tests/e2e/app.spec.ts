@@ -117,6 +117,15 @@ test.beforeEach(async ({ page }) => {
                     return { total_pages: 3, total_blocks: 3 };
                   }
                   if (name === "CancelTask") return undefined;
+                  if (name === "ExportMarkdown") {
+                    const request = args[0] as { start: number; end: number };
+                    if (request.start !== 1 || request.end !== 3) {
+                      throw new Error(
+                        "Markdown range was not set to all pages",
+                      );
+                    }
+                    return "all-pages.md";
+                  }
                   if (name === "Search") {
                     const content = String(
                       (args[0] as { content?: string | null }).content ?? "",
@@ -283,6 +292,23 @@ test("confirms page deletion", async ({ page }) => {
   await expect(confirm).toBeVisible();
   await confirm.getByRole("button", { name: "Delete page" }).click();
   await expect(page.getByText("Deleted page 0")).toBeVisible();
+});
+
+test("keeps the all-pages range while a page finishes loading", async ({
+  page,
+}) => {
+  await page.goto("http://127.0.0.1:4173/?loaded");
+  await page.getByRole("button", { name: /^p1/ }).click();
+  await page.evaluate(() =>
+    window.runtime.EventsEmit("menu:command", "export-markdown"),
+  );
+  const dialog = page.getByRole("dialog", { name: "Export Markdown" });
+  await dialog.getByRole("button", { name: "All pages" }).click();
+  await page.waitForTimeout(120);
+  await expect(dialog.getByLabel("Start page")).toHaveValue("1");
+  await expect(dialog.getByLabel("End page")).toHaveValue("3");
+  await dialog.getByRole("button", { name: "Export", exact: true }).click();
+  await expect(page.getByText("Exported all-pages.md")).toBeVisible();
 });
 
 test("keeps only the latest search response", async ({ page }) => {
