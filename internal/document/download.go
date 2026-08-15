@@ -2,6 +2,7 @@ package document
 
 import (
 	"context"
+	"maps"
 	"os"
 	"path/filepath"
 )
@@ -21,7 +22,7 @@ func (s *Service) DownloadAssets(ctx context.Context, progress func(int, int, st
 		}
 		pages[i] = copyPage
 	}
-	assets := cloneAssets(s.assets)
+	assets := maps.Clone(s.assets)
 	revision := s.revision
 	s.mu.RUnlock()
 

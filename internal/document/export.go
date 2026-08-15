@@ -20,7 +20,7 @@ func (s *Service) ExportJSON(ctx context.Context, target string, progress func(i
 		return coded("not_loaded", "Import a Paddle JSON file first")
 	}
 	pages := append([]pageRecord(nil), s.pages...)
-	assets := cloneAssets(s.assets)
+	assets := maps.Clone(s.assets)
 	revision := s.revision
 	s.mu.RUnlock()
 	if filepath.Ext(target) == "" {
@@ -158,8 +158,6 @@ func (s *Service) ExportMarkdown(ctx context.Context, target string, start, end 
 	}
 	return replaceFile(name, target)
 }
-
-func cloneAssets(source map[string]assetRecord) map[string]assetRecord { return maps.Clone(source) }
 
 func markdownAssets(pages []pageRecord, source map[string]assetRecord) map[string]assetRecord {
 	result := map[string]assetRecord{}
