@@ -1,0 +1,248 @@
+.body {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.view {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.header {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+.controls,
+.zoom,
+.switch {
+  display: flex;
+  align-items: center;
+}
+
+.controls {
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.zoom {
+  gap: 0.5rem;
+}
+
+.zoom input {
+  width: 7rem;
+  accent-color: var(--accent);
+}
+
+.zoom output {
+  width: 2.5rem;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.switch {
+  gap: 0.4rem;
+  cursor: pointer;
+}
+
+.switch input {
+  appearance: none;
+  width: 2rem;
+  height: 1.125rem;
+  margin: 0;
+  padding: 2px;
+  border: 1px solid var(--border-strong);
+  border-radius: 9999px;
+  background: var(--surface-active);
+  cursor: pointer;
+}
+
+.switch input::before {
+  content: "";
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  box-shadow: var(--shadow);
+  transition: transform 0.12s ease;
+}
+
+.switch input:checked {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.switch input:checked::before {
+  transform: translateX(0.875rem);
+}
+
+.switch input:focus-visible,
+.zoom input:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  background: var(--bg-elevated);
+  color: var(--text);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.layout {
+  flex: 1 1 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(220px, 0.8fr);
+  grid-template-rows: minmax(0, 1fr);
+  gap: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.canvas {
+  padding: 1rem;
+  min-height: 0;
+  height: 100%;
+  border-right: 1px solid var(--border);
+  background: var(--surface-hover);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.blocks {
+  padding: 1rem;
+  min-height: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.blocks h3 {
+  margin: 0 0 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+}
+
+.scroll {
+  flex: 1 1 0;
+  min-height: 0;
+  overflow: auto;
+  padding-right: 0.25rem;
+}
+
+.row {
+  min-height: 56px;
+  padding: 2px 0;
+}
+
+.item {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.2rem 0.5rem;
+  align-items: start;
+  padding: 0.35rem 0.5rem;
+  text-align: left;
+  white-space: normal;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text);
+}
+
+@media (hover: hover) {
+  .item:hover {
+    background: var(--surface-hover);
+    border-color: var(--border);
+  }
+}
+
+.item:active {
+  background: var(--surface-active);
+}
+
+.itemActive,
+.itemActive:hover,
+.itemActive:active {
+  background: var(--accent-soft);
+  color: var(--text);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+}
+
+.itemActive .id,
+.itemActive .preview,
+.itemActive .chip,
+.itemActive:hover .id,
+.itemActive:hover .preview,
+.itemActive:hover .chip {
+  color: inherit;
+  border-color: currentColor;
+  background: transparent;
+}
+
+.id {
+  grid-row: span 2;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text);
+  padding-top: 2px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 0.35rem;
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  font-size: 0.6875rem;
+  color: var(--text-secondary);
+  background: var(--bg-elevated);
+  width: fit-content;
+}
+
+.preview {
+  grid-column: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}

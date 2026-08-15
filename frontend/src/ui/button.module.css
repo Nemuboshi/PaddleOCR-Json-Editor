@@ -1,0 +1,89 @@
+.btn {
+  --button-bg: var(--bg-elevated);
+  --button-hover: var(--surface-hover);
+  --button-active: var(--surface-active);
+  --button-border: var(--border);
+  --button-color: var(--text);
+
+  appearance: none;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 2.25rem;
+  padding: 0 0.75rem;
+  margin: 0;
+  border: 1px solid var(--button-border);
+  border-radius: var(--radius-sm);
+  background: var(--button-bg);
+  color: var(--button-color);
+  font-family: inherit;
+  font-size: var(--control-font);
+  font-weight: 500;
+  line-height: 1.25rem;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+}
+
+@media (hover: hover) {
+  .btn:not(.bare):hover:not([data-disabled]):not(:disabled) {
+    background: var(--button-hover);
+  }
+}
+
+.btn:not(.bare):active:not([data-disabled]):not(:disabled) {
+  background: var(--button-active);
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--link);
+}
+
+.btn[data-disabled],
+.btn:disabled {
+  background: var(--surface-hover);
+  color: var(--color-disabled);
+  border-color: var(--border);
+  cursor: not-allowed;
+}
+
+.bare[data-disabled],
+.bare:disabled {
+  background: transparent;
+}
+
+.primary {
+  --button-bg: var(--accent);
+  --button-hover: #383838;
+  --button-active: #000000;
+  --button-border: var(--accent);
+  --button-color: white;
+}
+
+.danger {
+  --button-bg: var(--danger);
+  --button-hover: #d70000;
+  --button-active: #c50000;
+  --button-border: var(--danger);
+  --button-color: white;
+}
+
+.ghost {
+  background: transparent;
+}
+
+/* Transparent chrome — callers own hover/active backgrounds (lists, canvas blocks). */
+.bare {
+  background: transparent;
+  border-color: transparent;
+  color: inherit;
+}
+
+.sm {
+  height: 2rem;
+  padding: 0 0.5rem;
+  font-size: 0.8125rem;
+}

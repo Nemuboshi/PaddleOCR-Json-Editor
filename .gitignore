@@ -1,0 +1,23 @@
+# Dependencies
+/frontend/node_modules/
+
+# Generated output
+/frontend/dist/
+/frontend/package.json.md5
+/build/bin/
+
+# Test output
+/frontend/test-results/
+/frontend/playwright-report/
+/frontend/coverage/
+
+# Logs and environment files
+*.log
+.env
+.env.*
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

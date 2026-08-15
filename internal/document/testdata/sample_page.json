@@ -1,0 +1,387 @@
+[
+  {
+    "prunedResult": {
+      "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": true,
+        "use_ocr_for_image_block": false,
+        "format_block_content": true,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+          "number",
+          "footnote",
+          "header",
+          "header_image",
+          "footer",
+          "footer_image",
+          "aside_text"
+        ],
+        "return_layout_polygon_points": true
+      },
+      "parsing_res_list": [
+        {
+          "block_label": "header_image",
+          "block_content": "<div style=\"text-align: center;\"></div>\n",
+          "block_bbox": [32, 17, 96, 114],
+          "block_id": 0,
+          "group_id": 0,
+          "block_polygon_points": [[32, 17], [96, 17], [96, 114], [32, 114]]
+        },
+        {
+          "block_label": "header",
+          "block_content": "计 算 机 科 学 丛 书",
+          "block_bbox": [223, 38, 967, 92],
+          "block_id": 1,
+          "group_id": 1,
+          "block_polygon_points": [[223, 38], [967, 38], [967, 92], [223, 92]]
+        },
+        {
+          "block_label": "image",
+          "block_content": "<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_38_164_119_244.jpg\" alt=\"Image\" width=\"6%\" /></div>\n",
+          "block_bbox": [38, 164, 119, 244],
+          "block_id": 2,
+          "group_id": 2,
+          "block_polygon_points": [[38, 164], [119, 164], [119, 244], [38, 244]]
+        },
+        {
+          "block_label": "text",
+          "block_content": "原书第7版",
+          "block_bbox": [502, 137, 701, 188],
+          "block_id": 3,
+          "block_order": 1,
+          "group_id": 3,
+          "block_polygon_points": [
+            [502, 137],
+            [701, 137],
+            [701, 188],
+            [502, 188]
+          ]
+        },
+        {
+          "block_label": "doc_title",
+          "block_content": "# 数据库系统概念",
+          "block_bbox": [111, 268, 1083, 408],
+          "block_id": 4,
+          "block_order": 2,
+          "group_id": 4,
+          "block_polygon_points": [
+            [111, 268],
+            [1083, 268],
+            [1083, 408],
+            [111, 408]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "[美] 亚伯拉罕·西尔伯沙茨（Abraham Silberschatz）亨利·F. 科思（Henry F. Korth）耶鲁大学理海大学",
+          "block_bbox": [42, 437, 1099, 497],
+          "block_id": 5,
+          "block_order": 3,
+          "group_id": 5,
+          "block_polygon_points": [
+            [41.573944091796875, 446.00360107421875],
+            [1098.0001220703125, 437],
+            [1098.4925537109375, 494.78558349609375],
+            [42.06640625, 503.7891845703125]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "[印] S. 苏达尔尚（S. Sudarshan）\n\n印度理工学院孟买校区",
+          "block_bbox": [356, 520, 786, 590],
+          "block_id": 6,
+          "block_order": 4,
+          "group_id": 6,
+          "block_polygon_points": [
+            [356, 520],
+            [786, 520],
+            [786, 590],
+            [356, 590]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "杨冬青 李红燕 张金波 等译\n\n北京大学",
+          "block_bbox": [430, 604, 803, 683],
+          "block_id": 7,
+          "block_order": 5,
+          "group_id": 7,
+          "block_polygon_points": [
+            [430, 604],
+            [803, 604],
+            [803, 683],
+            [430, 683]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "数据库领域的殿堂级作品，数据库理论与实战兼修的必备之选",
+          "block_bbox": [196, 750, 1002, 792],
+          "block_id": 8,
+          "block_order": 6,
+          "group_id": 8,
+          "block_polygon_points": [
+            [196, 750],
+            [1002, 750],
+            [1002, 792],
+            [196, 792]
+          ]
+        },
+        {
+          "block_label": "image",
+          "block_content": "<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_0_826_389_1412.jpg\" alt=\"Image\" width=\"32%\" /></div>\n",
+          "block_bbox": [0, 826, 389, 1412],
+          "block_id": 9,
+          "group_id": 9,
+          "block_polygon_points": [[0, 826], [389, 826], [389, 1412], [0, 1412]]
+        },
+        {
+          "block_label": "vision_footnote",
+          "block_content": "SEVENTH EDITION\n\nDatabase System Concepts",
+          "block_bbox": [411, 855, 778, 917],
+          "block_id": 10,
+          "group_id": 10,
+          "block_polygon_points": [
+            [411, 855],
+            [778, 855],
+            [778, 917],
+            [411, 917]
+          ]
+        },
+        {
+          "block_label": "image",
+          "block_content": "<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_392_931_809_1407.jpg\" alt=\"Image\" width=\"35%\" /></div>\n",
+          "block_bbox": [392, 931, 809, 1407],
+          "block_id": 11,
+          "group_id": 11,
+          "block_polygon_points": [
+            [392, 931],
+            [809, 931],
+            [809, 1407],
+            [392, 1407]
+          ]
+        },
+        {
+          "block_label": "image",
+          "block_content": "<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_813_820_1191_1410.jpg\" alt=\"Image\" width=\"31%\" /></div>\n",
+          "block_bbox": [813, 820, 1191, 1410],
+          "block_id": 12,
+          "group_id": 12,
+          "block_polygon_points": [
+            [813, 820],
+            [1191, 820],
+            [1191, 1410],
+            [813, 1410]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "Database System Concepts",
+          "block_bbox": [390, 1424, 809, 1463],
+          "block_id": 13,
+          "block_order": 7,
+          "group_id": 13,
+          "block_polygon_points": [
+            [390, 1424],
+            [809, 1424],
+            [809, 1463],
+            [390, 1463]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "Seventh Edition",
+          "block_bbox": [497, 1468, 692, 1500],
+          "block_id": 14,
+          "block_order": 8,
+          "group_id": 14,
+          "block_polygon_points": [
+            [497, 1468],
+            [692, 1468],
+            [692, 1500],
+            [497, 1500]
+          ]
+        },
+        {
+          "block_label": "footer_image",
+          "block_content": "<div style=\"text-align: center;\"></div>\n",
+          "block_bbox": [466, 1580, 743, 1634],
+          "block_id": 15,
+          "group_id": 15,
+          "block_polygon_points": [
+            [466, 1580],
+            [743, 1580],
+            [743, 1634],
+            [466, 1634]
+          ]
+        }
+      ],
+      "layout_det_res": {
+        "boxes": [
+          {
+            "cls_id": 13,
+            "label": "header_image",
+            "score": 0.5873086452484131,
+            "coordinate": [32, 17, 96, 114],
+            "polygon_points": [[32, 17], [96, 17], [96, 114], [32, 114]]
+          },
+          {
+            "cls_id": 12,
+            "label": "header",
+            "score": 0.6506777405738831,
+            "coordinate": [223, 38, 967, 92],
+            "polygon_points": [[223, 38], [967, 38], [967, 92], [223, 92]]
+          },
+          {
+            "cls_id": 14,
+            "label": "image",
+            "score": 0.6050612330436707,
+            "coordinate": [38, 164, 119, 244],
+            "polygon_points": [[38, 164], [119, 164], [119, 244], [38, 244]]
+          },
+          {
+            "cls_id": 22,
+            "label": "text",
+            "score": 0.7430993914604187,
+            "coordinate": [502, 137, 701, 188],
+            "order": 1,
+            "polygon_points": [[502, 137], [701, 137], [701, 188], [502, 188]]
+          },
+          {
+            "cls_id": 6,
+            "label": "doc_title",
+            "score": 0.8864438533782959,
+            "coordinate": [111, 268, 1083, 408],
+            "order": 2,
+            "polygon_points": [[111, 268], [1083, 268], [1083, 408], [111, 408]]
+          },
+          {
+            "cls_id": 22,
+            "label": "text",
+            "score": 0.3987464904785156,
+            "coordinate": [42, 437, 1099, 497],
+            "order": 3,
+            "polygon_points": [
+              [41.573944091796875, 446.00360107421875],
+              [1098.0001220703125, 437],
+              [1098.4925537109375, 494.78558349609375],
+              [42.06640625, 503.7891845703125]
+            ]
+          },
+          {
+            "cls_id": 22,
+            "label": "text",
+            "score": 0.5095921754837036,
+            "coordinate": [356, 520, 786, 590],
+            "order": 4,
+            "polygon_points": [[356, 520], [786, 520], [786, 590], [356, 590]]
+          },
+          {
+            "cls_id": 22,
+            "label": "text",
+            "score": 0.6679619550704956,
+            "coordinate": [430, 604, 803, 683],
+            "order": 5,
+            "polygon_points": [[430, 604], [803, 604], [803, 683], [430, 683]]
+          },
+          {
+            "cls_id": 22,
+            "label": "text",
+            "score": 0.5705784559249878,
+            "coordinate": [196, 750, 1002, 792],
+            "order": 6,
+            "polygon_points": [[196, 750], [1002, 750], [1002, 792], [196, 792]]
+          },
+          {
+            "cls_id": 14,
+            "label": "image",
+            "score": 0.9413410425186157,
+            "coordinate": [0, 826, 389, 1412],
+            "polygon_points": [[0, 826], [389, 826], [389, 1412], [0, 1412]]
+          },
+          {
+            "cls_id": 24,
+            "label": "vision_footnote",
+            "score": 0.6574445366859436,
+            "coordinate": [411, 855, 778, 917],
+            "polygon_points": [[411, 855], [778, 855], [778, 917], [411, 917]]
+          },
+          {
+            "cls_id": 14,
+            "label": "image",
+            "score": 0.9553421139717102,
+            "coordinate": [392, 931, 809, 1407],
+            "polygon_points": [[392, 931], [809, 931], [809, 1407], [392, 1407]]
+          },
+          {
+            "cls_id": 14,
+            "label": "image",
+            "score": 0.9629480242729187,
+            "coordinate": [813, 820, 1191, 1410],
+            "polygon_points": [
+              [813, 820],
+              [1191, 820],
+              [1191, 1410],
+              [813, 1410]
+            ]
+          },
+          {
+            "cls_id": 22,
+            "label": "text",
+            "score": 0.5299234986305237,
+            "coordinate": [390, 1424, 809, 1463],
+            "order": 7,
+            "polygon_points": [
+              [390, 1424],
+              [809, 1424],
+              [809, 1463],
+              [390, 1463]
+            ]
+          },
+          {
+            "cls_id": 22,
+            "label": "text",
+            "score": 0.5497455596923828,
+            "coordinate": [497, 1468, 692, 1500],
+            "order": 8,
+            "polygon_points": [
+              [497, 1468],
+              [692, 1468],
+              [692, 1500],
+              [497, 1500]
+            ]
+          },
+          {
+            "cls_id": 9,
+            "label": "footer_image",
+            "score": 0.6248754858970642,
+            "coordinate": [466, 1580, 743, 1634],
+            "polygon_points": [
+              [466, 1580],
+              [743, 1580],
+              [743, 1634],
+              [466, 1634]
+            ]
+          }
+        ]
+      }
+    },
+    "markdown": {
+      "text": "<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_38_164_119_244.jpg\" alt=\"Image\" width=\"6%\" /></div>\n\n\n原书第7版\n\n# 数据库系统概念\n\n[美] 亚伯拉罕·西尔伯沙茨（Abraham Silberschatz）亨利·F. 科思（Henry F. Korth）耶鲁大学理海大学\n\n[印] S. 苏达尔尚（S. Sudarshan）\n\n印度理工学院孟买校区\n\n杨冬青 李红燕 张金波 等译\n\n北京大学\n\n数据库领域的殿堂级作品，数据库理论与实战兼修的必备之选\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_0_826_389_1412.jpg\" alt=\"Image\" width=\"32%\" /></div>\n\n\nSEVENTH EDITION\n\nDatabase System Concepts\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_392_931_809_1407.jpg\" alt=\"Image\" width=\"35%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_813_820_1191_1410.jpg\" alt=\"Image\" width=\"31%\" /></div>\n\n\nDatabase System Concepts\n\nSeventh Edition",
+      "images": {
+        "imgs/img_in_header_image_box_32_17_96_114.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//98bca603-4017-4900-9d07-35ffb7b256b5/markdown_0/imgs/img_in_header_image_box_32_17_96_114.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-17T01%3A41%3A45Z%2F-1%2F%2F1505d1a3a461bd1f0a344e9e7c1b4499ffe9cc5d976f736db0a52bef56618a41",
+        "imgs/img_in_image_box_38_164_119_244.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//98bca603-4017-4900-9d07-35ffb7b256b5/markdown_0/imgs/img_in_image_box_38_164_119_244.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-17T01%3A41%3A45Z%2F-1%2F%2F33707fb0b76f757ad8f9b53cffeecb2f0378487c166c3c96d7ec2d264e3d1a79",
+        "imgs/img_in_image_box_0_826_389_1412.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//98bca603-4017-4900-9d07-35ffb7b256b5/markdown_0/imgs/img_in_image_box_0_826_389_1412.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-17T01%3A41%3A46Z%2F-1%2F%2Fb23053498df891d0ada036eec4dc675061aa707931fda04b3c6e831d98ff4cdc",
+        "imgs/img_in_image_box_392_931_809_1407.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//98bca603-4017-4900-9d07-35ffb7b256b5/markdown_0/imgs/img_in_image_box_392_931_809_1407.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-17T01%3A41%3A46Z%2F-1%2F%2F7447c6b745e9a347a776326782f4fe69cb6860f9c91d9edec64a2babe337e57a",
+        "imgs/img_in_image_box_813_820_1191_1410.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//98bca603-4017-4900-9d07-35ffb7b256b5/markdown_0/imgs/img_in_image_box_813_820_1191_1410.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-17T01%3A41%3A46Z%2F-1%2F%2Fc7bc3f976599370c74b17825f9615c2f3f0b4943fc15f21d87c8623a56e374c1",
+        "imgs/img_in_footer_image_box_466_1580_743_1634.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//98bca603-4017-4900-9d07-35ffb7b256b5/markdown_0/imgs/img_in_footer_image_box_466_1580_743_1634.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-17T01%3A41%3A46Z%2F-1%2F%2F6512ea26e8cb63b5289f77916777f54841052b5b755db36ac9c0a966bed3b2d2"
+      }
+    },
+    "outputImages": {
+      "layout_det_res": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//98bca603-4017-4900-9d07-35ffb7b256b5/layout_det_res_0.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-17T01%3A41%3A46Z%2F-1%2F%2Ff7c64ae6f53e72470ec0be53b73bf2f6e88e244b42aa4cb1bd2b9b410ab8a140"
+    },
+    "inputImage": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//98bca603-4017-4900-9d07-35ffb7b256b5/input_img_0.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-17T01%3A41%3A47Z%2F-1%2F%2Fc08ba48939c29b83fee6a2b8b1473d7d0a57a62d5b631faebe3b0fe09618242c"
+  }
+]

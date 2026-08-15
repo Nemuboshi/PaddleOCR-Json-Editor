@@ -1,0 +1,123 @@
+.stage {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 0;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: none;
+}
+
+.panning,
+.blockDragging {
+  cursor: grabbing;
+}
+
+.message {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  color: var(--color-ink-muted);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-align: center;
+}
+
+.shell {
+  display: block;
+  flex-shrink: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-panel);
+}
+
+.loading {
+  position: absolute;
+  visibility: hidden;
+}
+
+.page {
+  position: relative;
+  display: block;
+  margin: 0;
+  overflow: hidden;
+  background: white;
+  line-height: 0;
+  transform-origin: top left;
+}
+
+.background,
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+.background {
+  display: block;
+  max-width: none;
+  padding: 0;
+  border: 0;
+  user-select: none;
+  pointer-events: none;
+}
+
+.overlay {
+  z-index: 1;
+  padding: 0;
+}
+
+.block {
+  position: absolute;
+  margin: 0;
+  overflow: hidden;
+  border: 2px solid var(--block-color, #111);
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--block-color, #111) 18%, transparent);
+  padding: 0;
+  text-align: left;
+}
+
+.block:hover {
+  z-index: 2;
+  background: color-mix(in srgb, var(--block-color, #111) 42%, transparent);
+  box-shadow: inset 0 0 0 1px
+    color-mix(in srgb, var(--block-color, #111) 70%, transparent);
+}
+
+.block[data-active="true"],
+.block[data-active="true"]:hover {
+  z-index: 3;
+  background: color-mix(in srgb, var(--block-color, #111) 48%, transparent);
+  box-shadow: inset 0 0 0 2px
+    color-mix(in srgb, var(--block-color, #111) 85%, transparent);
+}
+
+.block:disabled {
+  pointer-events: none;
+}
+
+.tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 9999px;
+  background: var(--block-color, #111);
+  padding: 1px 6px;
+  color: white;
+  font-size: 10px;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  pointer-events: none;
+}

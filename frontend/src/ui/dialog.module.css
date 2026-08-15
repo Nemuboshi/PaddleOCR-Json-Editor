@@ -1,0 +1,80 @@
+.popup {
+  position: fixed;
+  inset: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 24rem;
+  max-width: calc(100vw - 3rem);
+  max-height: calc(100vh - 3rem);
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-elevated);
+  color: var(--text);
+  box-shadow: var(--shadow-floating);
+  overflow: hidden;
+}
+
+.popup:not([open]) {
+  display: none;
+}
+
+.popup::backdrop {
+  background: color-mix(in srgb, var(--text) 18%, transparent);
+}
+
+.confirm {
+  z-index: 61;
+}
+
+.wide {
+  width: min(48rem, calc(100vw - 3rem));
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+
+.subtitle {
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.body {
+  overflow: auto;
+  min-height: 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.close {
+  min-width: 2rem;
+}
+
+.results {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  max-height: min(26rem, 50vh);
+  overflow-y: auto;
+}

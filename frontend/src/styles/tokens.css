@@ -1,0 +1,35 @@
+/* Global visual tokens — restrained ink, canvas, and hairlines. */
+:root {
+  --color: #171717;
+  --color-muted: #8f8f8f;
+  --color-disabled: #a1a1a1;
+  --bg: #fafafa;
+  --bg-elevated: #ffffff;
+  --surface: #ffffff;
+  --surface-hover: #f2f2f2;
+  --surface-active: #ebebeb;
+  --border: #ebebeb;
+  --border-strong: #d4d4d4;
+  --text: #171717;
+  --text-secondary: #4d4d4d;
+  --text-muted: #8f8f8f;
+  --accent: #171717;
+  --accent-soft: #f2f2f2;
+  --accent-strong: #000000;
+  --link: #0070f3;
+  --link-deep: #0761d1;
+  --link-soft: #d3e5ff;
+  --danger: #ee0000;
+  --danger-soft: #fff0f0;
+  --ok: #0070f3;
+  --ok-soft: #d3e5ff;
+  --shadow: 0 1px 1px rgb(0 0 0 / 4%);
+  --shadow-floating: 0 2px 2px rgb(0 0 0 / 4%), 0 8px 16px -4px rgb(0 0 0 / 8%);
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --font: "Frex Sans GB VF", "Noto Sans", sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --control-height: 2rem;
+  --control-font: 0.875rem;
+}

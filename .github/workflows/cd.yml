@@ -1,0 +1,74 @@
+name: Release
+
+on:
+  push:
+    tags: ["v-*"]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            artifact: PaddleJsonEditor-windows-amd64
+            path: build/bin/PaddleJsonEditor.exe
+          - os: ubuntu-22.04
+            artifact: PaddleJsonEditor-linux-amd64
+            path: build/bin/PaddleJsonEditor
+          - os: macos-13
+            artifact: PaddleJsonEditor-macos-amd64
+            path: build/bin/PaddleJsonEditor.app
+          - os: macos-14
+            artifact: PaddleJsonEditor-macos-arm64
+            path: build/bin/PaddleJsonEditor.app
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v7
+      - if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.0-dev
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: go.mod
+          cache: true
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 11.21.0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+          cache-dependency-path: frontend/pnpm-lock.yaml
+      - run: pnpm --dir frontend install --frozen-lockfile
+      - run: go install github.com/wailsapp/wails/v2/cmd/wails@latest
+      - if: runner.os != 'macOS'
+        uses: crazy-max/ghaction-upx@v4
+        with:
+          install-only: true
+      - run: wails build -upx
+      - if: runner.os == 'Windows'
+        shell: pwsh
+        run: Compress-Archive -Path '${{ matrix.path }}' -DestinationPath '${{ matrix.artifact }}.zip'
+      - if: runner.os != 'Windows'
+        run: tar -czf '${{ matrix.artifact }}.tar.gz' -C "$(dirname '${{ matrix.path }}')" "$(basename '${{ matrix.path }}')"
+      - uses: actions/upload-artifact@v7
+        with:
+          name: ${{ matrix.artifact }}
+          path: ${{ matrix.artifact }}.*
+          if-no-files-found: error
+
+  release:
+    needs: build
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          path: release
+          merge-multiple: true
+      - run: gh release create "$GITHUB_REF_NAME" release/* --generate-notes --verify-tag --title "$GITHUB_REF_NAME"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
